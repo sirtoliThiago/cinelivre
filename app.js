@@ -636,15 +636,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p style="font-size: 0.85em; margin: 10px 0;"><strong>Ritmo:</strong> Frenético, adrenalina alta.</p>
 
                         <ul style="list-style: none; font-size: 0.9em; padding: 0; line-height: 1.6;">
-                            <li><strong>10:00 - 12:00:</strong> Caçadores de Emoção (NetMovies)</li>
-                            <li style="color: var(--primary-color); font-size: 0.85em;">⏸️ <em>12:00 - 13:00: Pausa para o Almoço</em></li>
-                            <li><strong>13:00 - 15:00:</strong> Um Lugar Silencioso (Mercado Play)</li>
-                            <li><strong>15:00 - 17:00:</strong> Blade Runner (Pluto TV)</li>
-                            <li style="color: var(--primary-color); font-size: 0.85em;">⏸️ <em>17:00 - 17:30: Lanche Rápido & Café</em></li>
-                            <li><strong>17:30 - 20:00:</strong> Django Livre (Mercado Play)</li>
-                            <li style="color: var(--primary-color); font-size: 0.85em;">⏸️ <em>20:00 - 20:30: Pausa pro Jantar Delivery</em></li>
-                            <li><strong>20:30 - 22:45:</strong> Matrix (Pluto TV)</li>
+                            <li style="margin-bottom: 5px;"><strong>10:00 - 12:00:</strong> <a href="https://www.youtube.com/results?search_query=Ca%C3%A7adores+de+Emo%C3%A7%C3%A3o+filme+completo" target="_blank" style="color: #ef4444; text-decoration: underline;">Caçadores de Emoção</a> (NetMovies)</li>
+                            <li style="color: var(--primary-color); font-size: 0.85em; padding: 5px 0;">⏸️ <em>12:00 - 13:00: Pausa para o Almoço</em></li>
+                            <li style="margin-bottom: 5px;"><strong>13:00 - 15:00:</strong> <a href="https://play.mercadolivre.com.br/" target="_blank" style="color: #ef4444; text-decoration: underline;">Um Lugar Silencioso</a> (Mercado Play)</li>
+                            <li style="margin-bottom: 5px;"><strong>15:00 - 17:00:</strong> <a href="https://pluto.tv/pt/search/blade%20runner" target="_blank" style="color: #ef4444; text-decoration: underline;">Blade Runner</a> (Pluto TV)</li>
+                            <li style="color: var(--primary-color); font-size: 0.85em; padding: 5px 0;">⏸️ <em>17:00 - 17:30: Lanche Rápido & Café</em></li>
+                            <li style="margin-bottom: 5px;"><strong>17:30 - 20:00:</strong> <a href="https://play.mercadolivre.com.br/" target="_blank" style="color: #ef4444; text-decoration: underline;">Django Livre</a> (Mercado Play)</li>
+                            <li style="color: var(--primary-color); font-size: 0.85em; padding: 5px 0;">⏸️ <em>20:00 - 20:30: Pausa pro Jantar Delivery</em></li>
+                            <li style="margin-bottom: 5px;"><strong>20:30 - 22:45:</strong> <a href="https://pluto.tv/pt/search/matrix" target="_blank" style="color: #ef4444; text-decoration: underline;">Matrix</a> (Pluto TV)</li>
                         </ul>
+                    </div>
+
+                    <!-- AD BANNER IN-GRID -->
+                    <div class="ad-banner" style="width: 100%; border: 1px dashed var(--border-color); background: var(--sidebar-hover); text-align: center; padding: 20px; border-radius: 8px; flex-basis: 100%;">
+                        <span style="display:block; font-size: 0.7em; text-transform: uppercase;">Publicidade Patrocinada</span>
+                        [ Espaço para Banner Horizontal 728x90 ]
                     </div>
 
                     <!-- MARATONA 2 -->
@@ -653,13 +659,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p style="font-size: 0.85em; margin: 10px 0;"><strong>Ritmo:</strong> Leve, divertido e perfeito para família.</p>
 
                         <ul style="list-style: none; font-size: 0.9em; padding: 0; line-height: 1.6;">
-                            <li><strong>12:00 - 13:50:</strong> Chef (Vix)</li>
-                            <li><strong>13:50 - 15:40:</strong> A Mentira (Pluto TV)</li>
-                            <li style="color: var(--primary-color); font-size: 0.85em;">⏸️ <em>15:40 - 16:10: Tarde do Café e Sobremesa</em></li>
-                            <li><strong>16:10 - 17:50:</strong> O Golpista do Ano (Mercado Play)</li>
-                            <li><strong>17:50 - 19:40:</strong> Antes de Partir (Red Bull TV)</li>
-                            <li style="color: var(--primary-color); font-size: 0.85em;">⏸️ <em>19:40 - 21:00: Pausa Longa Jantar/Banho</em></li>
-                            <li><strong>21:00 - 23:30:</strong> O Auto da Compadecida (Libreflix/NetMovies)</li>
+                            <li style="margin-bottom: 5px;"><strong>12:00 - 13:50:</strong> <a href="https://www.vix.com/tv/search?q=chef" target="_blank" style="color: #f59e0b; text-decoration: underline;">Chef</a> (Vix)</li>
+                            <li style="margin-bottom: 5px;"><strong>13:50 - 15:40:</strong> <a href="https://pluto.tv/pt/search/mentira" target="_blank" style="color: #f59e0b; text-decoration: underline;">A Mentira</a> (Pluto TV)</li>
+                            <li style="color: var(--primary-color); font-size: 0.85em; padding: 5px 0;">⏸️ <em>15:40 - 16:10: Tarde do Café e Sobremesa</em></li>
+                            <li style="margin-bottom: 5px;"><strong>16:10 - 17:50:</strong> <a href="https://play.mercadolivre.com.br/" target="_blank" style="color: #f59e0b; text-decoration: underline;">O Golpista do Ano</a> (Mercado Play)</li>
+                            <li style="margin-bottom: 5px;"><strong>17:50 - 19:40:</strong> <a href="https://www.redbull.com/br-pt/" target="_blank" style="color: #f59e0b; text-decoration: underline;">Antes de Partir</a> (Red Bull TV)</li>
+                            <li style="color: var(--primary-color); font-size: 0.85em; padding: 5px 0;">⏸️ <em>19:40 - 21:00: Pausa Longa Jantar/Banho</em></li>
+                            <li style="margin-bottom: 5px;"><strong>21:00 - 23:30:</strong> <a href="https://libreflix.org/i/auto-da-compadecida" target="_blank" style="color: #f59e0b; text-decoration: underline;">O Auto da Compadecida</a> (Libreflix)</li>
                         </ul>
                     </div>
                 </div>
