@@ -127,9 +127,11 @@ const seriesByGenreData = [
         genre: 'Comédia e Sitcoms',
         platformRecommendation: 'Pluto TV, Vix',
         movies: [
-            { title: 'The Office', rating: '★★★★★', reason: 'A sitcom definitiva corporativa.', platform: 'Prime/JustWatch', hiddenGem: false, link: '' },
+            { title: 'The Office', rating: '★★★★★', reason: 'A sitcom definitiva.', platform: 'Prime/JustWatch', hiddenGem: false, link: '' },
             { title: 'Todo Mundo Odeia o Chris', rating: '★★★★★', reason: 'Clássico da TV.', platform: 'Pluto TV', hiddenGem: false, link: '' },
-            { title: 'Brooklyn Nine-Nine', rating: '★★★★☆', reason: 'Comédia policial.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' }
+            { title: 'Brooklyn Nine-Nine', rating: '★★★★☆', reason: 'Comédia policial.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
+            { title: 'Eu, a Patroa e as Crianças', rating: '★★★★☆', reason: 'Nostalgia pura.', platform: 'JustWatch', hiddenGem: false, link: '' },
+            { title: 'Parks and Recreation', rating: '★★★★☆', reason: 'Humor leve e cativante.', platform: 'JustWatch', hiddenGem: true, link: '' }
         ]
     },
     {
@@ -138,7 +140,9 @@ const seriesByGenreData = [
         movies: [
             { title: 'Breaking Bad', rating: '★★★★★', reason: 'A obra-prima moderna.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
             { title: 'Peaky Blinders', rating: '★★★★☆', reason: 'Máfia na Inglaterra.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
-            { title: 'Chernobyl', rating: '★★★★★', reason: 'Desastre real.', platform: 'Max/JustWatch', hiddenGem: true, link: '' }
+            { title: 'Chernobyl', rating: '★★★★★', reason: 'Desastre dramático.', platform: 'Max/JustWatch', hiddenGem: true, link: '' },
+            { title: 'Prison Break', rating: '★★★★☆', reason: 'Fuga eletrizante.', platform: 'JustWatch', hiddenGem: false, link: '' },
+            { title: 'Mr. Robot', rating: '★★★★★', reason: 'Hacking profundo.', platform: 'Prime', hiddenGem: true, link: '' }
         ]
     },
     {
@@ -147,9 +151,37 @@ const seriesByGenreData = [
         movies: [
             { title: 'Stranger Things', rating: '★★★★☆', reason: 'Vibe anos 80.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
             { title: 'Dark', rating: '★★★★★', reason: 'Quebra-cabeça temporal.', platform: 'Netflix/JustWatch', hiddenGem: true, link: '' },
-            { title: 'Doctor Who', rating: '★★★★☆', reason: 'Clássico britânico.', platform: 'Pluto TV', hiddenGem: false, link: '' }
+            { title: 'Doctor Who', rating: '★★★★☆', reason: 'Clássico sci-fi.', platform: 'Pluto TV', hiddenGem: false, link: '' },
+            { title: 'The Boys', rating: '★★★★☆', reason: 'Heróis distorcidos.', platform: 'Prime', hiddenGem: false, link: '' },
+            { title: 'Black Mirror', rating: '★★★★★', reason: 'Distopia.', platform: 'Netflix', hiddenGem: false, link: '' }
+        ]
+    },
+    {
+        genre: 'Ação e Aventura',
+        platformRecommendation: 'Mercado Play',
+        movies: [
+            { title: 'The Last of Us', rating: '★★★★★', reason: 'Sobrevivência pós-apocalíptica.', platform: 'Max/JustWatch', hiddenGem: false, link: '' },
+            { title: 'Vikings', rating: '★★★★☆', reason: 'Batalhas nórdicas.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
+            { title: 'The Witcher', rating: '★★★★☆', reason: 'Magia e monstros.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' },
+            { title: 'Cobra Kai', rating: '★★★★☆', reason: 'Karatê de nostalgia.', platform: 'Netflix/JustWatch', hiddenGem: false, link: '' }
         ]
     }
+];
+
+const liveChannelsData = [
+    { name: 'CazéTV', category: 'Futebol & Transmissões', current: 'Esportes Ao Vivo 24/7', img: 'https://images.unsplash.com/photo-1518605368461-1ee7a52e519e?auto=format&fit=crop&w=600&q=80', link: 'https://www.youtube.com/@CazeTV' },
+    { name: 'Pluto TV Cine', category: 'Sessão Cinema', current: 'Acervo de Ação & Comédia', img: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80', link: 'https://pluto.tv/pt/live-tv/5eac97fe6bde95000780287a' },
+    { name: 'Runtime Pipoca', category: 'Maratona', current: 'Clássicos de Hollywood', img: 'https://images.unsplash.com/photo-1595769816263-9b9a078028ef?auto=format&fit=crop&w=600&q=80', link: 'https://www.runtime.tv/live-tv/runtime-cine-e-series' },
+    { name: 'Red Bull TV', category: 'Adrenalina', current: 'Esportes Radicais', img: 'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=600&q=80', link: 'https://www.redbull.com/br-pt/discover' },
+    { name: 'Record News', category: 'Jornalismo', current: 'Cobertura Global Ao Vivo', img: 'https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=600&q=80', link: 'https://www.youtube.com/@RecordNews' },
+    { name: 'SBT News', category: 'Jornalismo Brasil', current: 'Noticiário em Tempo Real', img: 'https://images.unsplash.com/photo-1557425955-df376b5903c8?auto=format&fit=crop&w=600&q=80', link: 'https://www.youtube.com/@sbtnews' }
+];
+
+const animeChannelsData = [
+    { name: 'Pluto TV Anime', category: 'Canal Oficial 24h', current: 'Naruto, Bleach, Yashahime', img: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80', link: 'https://pluto.tv/pt/' },
+    { name: 'Crunchyroll Brasil', category: 'YouTube TV (Grátis)', current: 'Episódios Dublados Inteiros', img: 'https://images.unsplash.com/photo-1560972550-aba3456b5564?auto=format&fit=crop&w=600&q=80', link: 'https://www.youtube.com/@CrunchyrollPT' },
+    { name: 'NetMovies Anime', category: 'Clássicos Livres', current: 'Acervo Nostálgico Legalizado', img: 'https://images.unsplash.com/photo-1541562232579-512a21360020?auto=format&fit=crop&w=600&q=80', link: 'https://www.youtube.com/@NetmoviesAnime' },
+    { name: 'Vix Animes Grátis', category: 'Sessão On-Demand', current: 'Animes e Séries Tokusatsu', img: 'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=600&q=80', link: 'https://www.vix.com/' }
 ];
 
 // --- AUTO-HYDRATOR FOR IMAGES AND LINKS ---
@@ -223,13 +255,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const titles = {
         'dashboard': 'Painel de Controle Mestre',
+        'canais': '🔴 TV Ao Vivo Gratuita (Zapping)',
+        'animes': '⛩️ Mundo Anime (Grátis)',
         'plataformas': 'Plataformas Gratuitas (Descoberta)',
         'generos': 'Explorar por Gênero',
         'series': 'Séries Recomendadas',
         'classicos': 'Arquivo de Cinema Clássico',
-        'rastreador': 'Rastreador Inteligente',
         'internacional': 'Cinema Internacional',
-        'alertas': 'Alertas de Lançamento',
         'maratona': 'Arquiteto de Maratonas',
         'joias': 'Garimpeiro de Joias Escondidas'
     };
@@ -352,25 +384,96 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'plataformas': () => {
             let html = '<p style="margin-bottom: 20px; font-size: 1.1em;">Descubra 15 plataformas 100% legais e gratuitas disponíveis no Brasil. Explore e escolha o que melhor se adapta a você!</p>';
-            html += '<div class="grid-container">';
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">';
             
-            platformsData.forEach(p => {
-                const highlightBadge = p.highlight ? `<div class="platform-badge">${p.highlight}</div>` : '';
+            const gifPool = [
+                'https://media.giphy.com/media/26ufncGZtAih20xZm/giphy.gif',
+                'https://media.giphy.com/media/11s7Ke7jcNxCHS/giphy.gif',
+                'https://media.giphy.com/media/3o7rc0qU6m5hneMsru/giphy.gif',
+                'https://media.giphy.com/media/rTigf3I7WzN7O/giphy.gif',
+                'https://media.giphy.com/media/l41lUSJpbX2PZ4Nxe/giphy.gif',
+                'https://media.giphy.com/media/JkI07Ym8e5i4U/giphy.gif',
+                'https://media.giphy.com/media/HSDTcqlNCdPEs/giphy.gif'
+            ];
+
+            platformsData.forEach((p, idx) => {
+                const highlightBadge = p.highlight ? `<span class="platform-badge" style="position:absolute; top:10px; right:10px; z-index:2; background-color: var(--accent-color); font-size: 0.7em;">${p.highlight}</span>` : '';
+                const gif = gifPool[idx % gifPool.length];
+                
                 html += `
-                    <div class="card platform-card">
+                    <div class="card platform-card img-preview-card" style="padding: 0; overflow: hidden; position: relative; display: flex; flex-direction: column;">
                         ${highlightBadge}
-                        <h3 style="color: var(--primary-color); font-size: 1.4em;">${p.name}</h3>
-                        <p><strong>Catálogo:</strong> <span class="platform-pill">${p.catalog}</span></p>
-                        <p><strong>Qualidade de Vídeo:</strong> ${p.quality}</p>
-                        <p><strong>Frequência de Anúncios:</strong> ${p.ads}</p>
-                        <p><strong>Onde Assistir:</strong> ${p.devices}</p>
-                        <p><strong>Requer Cadastro:</strong> ${p.registration}</p>
-                        <p><strong>Destaque Principal:</strong> ${p.features}</p>
-                        <a href="${p.link}" target="_blank" class="btn">Acessar ${p.name}</a>
+                        <div style="height: 140px; overflow: hidden; position: relative;">
+                            <img src="${gif}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85;" alt="GIF preview">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(15,23,42,1) 10%, transparent); height: 60%;"></div>
+                        </div>
+                        <div style="padding: 15px; display: flex; flex-direction: column; flex: 1;">
+                            <h3 style="color: var(--primary-color); font-size: 1.4em; margin-bottom: 10px;">${p.name}</h3>
+                            <div style="font-size: 0.85em; line-height: 1.6; margin-bottom: 15px; flex: 1;">
+                                <p style="margin-bottom: 8px;"><strong>Catálogo:</strong> <span style="background:var(--bg-color); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border-color);">${p.catalog}</span></p>
+                                <p><strong>📺 Dispositivos:</strong> ${p.devices}</p>
+                                <p><strong>⚙️ Specs:</strong> ${p.quality} | Anúncios: ${p.ads}</p>
+                                <p><strong>🔐 Cadastro:</strong> ${p.registration}</p>
+                                <p style="margin-top: 8px; font-style: italic;">"${p.features}"</p>
+                            </div>
+                            <a href="${p.link}" target="_blank" class="btn" style="text-align: center; width: 100%;">Acessar ${p.name}</a>
+                        </div>
                     </div>
                 `;
             });
             
+            html += '</div>';
+            return html;
+        },
+        'animes': () => {
+            let html = '<div class="card" style="margin-bottom: 20px;">';
+            html += '<h2 style="color: #f59e0b;">⛩️ Mundo Anime (24h)</h2>';
+            html += '<p style="margin-top: 10px;">Acesso dinâmico aos melhores simulcasts e canais 24 horas focados na cultura pop oriental. Opções 100% legalizadas e gratuitas!</p>';
+            html += '</div>';
+
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">';
+            animeChannelsData.forEach(c => {
+                html += `
+                    <div class="card platform-card img-preview-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column; border-top: 4px solid #f59e0b;">
+                        <a href="${c.link}" target="_blank" style="display: block; position: relative;">
+                            <span class="platform-badge" style="position: absolute; top:10px; left:10px; background-color: #f59e0b; z-index:2;">🔴 AO VIVO</span>
+                            <img src="${c.img}" alt="${c.name}" style="width: 100%; height: 180px; object-fit: cover; opacity: 0.9;">
+                        </a>
+                        <div style="padding: 15px; flex: 1; display: flex; flex-direction: column;">
+                            <span style="font-size: 0.75em; text-transform: uppercase; color: var(--text-color); letter-spacing: 1px; margin-bottom: 5px;">${c.category}</span>
+                            <h3 style="color: var(--primary-color); font-size: 1.3em;">${c.name}</h3>
+                            <p style="font-size: 0.9em; margin: 10px 0; flex: 1;"><strong>No Ar:</strong> ${c.current}</p>
+                            <a href="${c.link}" target="_blank" class="btn" style="text-align: center; width: 100%; background: #f59e0b; color: #000; font-weight: bold;">▶ Assistir Agora</a>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            return html;
+        },
+        'canais': () => {
+            let html = '<div class="card" style="margin-bottom: 20px;">';
+            html += '<h2 style="color: #ef4444;">Guia de TV Ao Vivo 🔴</h2>';
+            html += '<p style="margin-top: 10px;">Faça um zapping interativo pelos melhores canais 24h em tempo real! Tudo grátis e legalizado pelas emissoras e plataformas oficiais.</p>';
+            html += '</div>';
+
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">';
+            liveChannelsData.forEach(c => {
+                html += `
+                    <div class="card platform-card img-preview-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <a href="${c.link}" target="_blank" style="display: block; position: relative;">
+                            <span class="platform-badge" style="position: absolute; top:10px; left:10px; background-color: #ef4444; z-index:2; animation: blink 2s infinite;">🔴 AO VIVO</span>
+                            <img src="${c.img}" alt="${c.name}" style="width: 100%; height: 180px; object-fit: cover; opacity: 0.9;">
+                        </a>
+                        <div style="padding: 15px; flex: 1; display: flex; flex-direction: column;">
+                            <span style="font-size: 0.75em; text-transform: uppercase; color: var(--text-color); letter-spacing: 1px; margin-bottom: 5px;">${c.category}</span>
+                            <h3 style="color: var(--primary-color); font-size: 1.3em;">${c.name}</h3>
+                            <p style="font-size: 0.9em; margin: 10px 0; flex: 1;"><strong>No Ar:</strong> ${c.current}</p>
+                            <a href="${c.link}" target="_blank" class="btn" style="text-align: center; width: 100%; background: #ef4444; color: white;">Assistir no Estúdio</a>
+                        </div>
+                    </div>
+                `;
+            });
             html += '</div>';
             return html;
         },
@@ -487,29 +590,6 @@ document.addEventListener('DOMContentLoaded', () => {
             html += '</div>';
             return html;
         },
-        'rastreador': () => {
-            let html = '<div class="card" style="margin-bottom: 20px;">';
-            html += '<h2 style="color: var(--primary-color);">Rastreador Inteligente de Episódios 📺</h2>';
-            html += '<p style="margin-top: 10px;">Não se perca nas suas séries! Adicione o que está assistindo nas plataformas gratuitas e nós salvaremos o seu progresso localmente no navegador.</p>';
-            html += '</div>';
-
-            html += `
-                <div class="card" style="margin-bottom: 20px; background-color: var(--sidebar-hover);">
-                    <h3 style="margin-bottom: 10px;">➕ Adicionar Nova Série</h3>
-                    <form id="tracker-form" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <input type="text" id="t-name" placeholder="Nome..." required style="flex: 2; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
-                        <input type="number" id="t-season" placeholder="Temp." value="1" min="1" required style="flex: 1; min-width: 80px; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
-                        <input type="number" id="t-ep" placeholder="Ep." value="1" min="1" required style="flex: 1; min-width: 80px; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
-                        <input type="text" id="t-plat" placeholder="Onde? (ex: Pluto TV)" style="flex: 1.5; min-width: 150px; padding: 10px; border-radius: 5px; border: 1px solid var(--border-color); background: var(--bg-color); color: var(--text-color);">
-                        <button type="submit" class="btn" style="flex: 1; min-width: 120px;">Adicionar</button>
-                    </form>
-                </div>
-                
-                <h3 style="margin-bottom: 15px; color: var(--primary-color);">Séries em Andamento:</h3>
-                <div id="tracker-list" class="grid-container" style="margin-top: 0;"></div>
-            `;
-            return html;
-        },
         'internacional': () => {
             let html = '<div class="card" style="margin-bottom: 20px;">';
             html += '<h2 style="color: var(--primary-color);">Cinema Mundial & Gateways Culturais 🌍</h2>';
@@ -540,47 +620,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             html += '</div>';
 
-            return html;
-        },
-        'alertas': () => {
-            let html = '<div class="card" style="margin-bottom: 20px;">';
-            html += '<h2 style="color: var(--primary-color);">Sistema de Alertas de Lançamento 🔔</h2>';
-            html += '<p style="margin-top: 10px;">Como nosso foco é <b>custo zero</b>, desenhamos um método infalível usando ferramentas externas gratuitas para você ser notificado assim que um filme ou série chegar ao streaming aberto.</p>';
-            html += '</div>';
-
-            html += `
-                <div class="grid-container">
-                    <div class="card platform-card">
-                        <h3>1. O Método JustWatch (E-mail)</h3>
-                        <p style="margin-top: 10px;">O JustWatch monitora todas as plataformas brasileiras oficiais simultaneamente.</p>
-                        <ul style="margin-left: 20px; font-size: 0.9em; margin-top: 10px; line-height: 1.5;">
-                            <li>1. Crie uma conta gratuita no JustWatch.</li>
-                            <li>2. Filtre por "Grátis" e "Com Anúncios" (Pluto TV, Vix, Mercado Play).</li>
-                            <li>3. Adicione os filmes a sua <b>"Watchlist"</b>.</li>
-                            <li>4. Ative os alertas no e-mail nas config. de conta.</li>
-                        </ul>
-                    </div>
-
-                    <div class="card platform-card">
-                        <h3>2. Alertas do Google (Automático)</h3>
-                        <p style="margin-top: 10px;">Receba no e-mail mal a notícia saia.</p>
-                        <p style="margin-top: 10px; font-size: 0.9em;">Acesse o Google Alerts e crie o alerta com as aspas exatas:</p>
-                        <div style="background: var(--sidebar-hover); padding: 10px; border-radius: 5px; margin-top: 10px; font-family: monospace; font-size: 0.85em; font-weight: bold;">
-                            "Nome do Filme" AND ("assistir gratis" OR "pluto tv" OR "mercado play" OR "vix")
-                        </div>
-                    </div>
-
-                    <div class="card platform-card">
-                        <h3>3. Solução com RSS / Telegram</h3>
-                        <p style="margin-top: 10px;">Use um bot do Telegram para alertas imediatos.</p>
-                        <ul style="margin-left: 20px; font-size: 0.9em; margin-top: 10px; line-height: 1.5;">
-                            <li>Abra o Telegram e busque por <b>@TheFeedReaderBot</b>.</li>
-                            <li>Configure para seguir sites como lançamentos da Vivo/Pluto.</li>
-                            <li>Notificação instantânea para o celular!</li>
-                        </ul>
-                    </div>
-                </div>
-            `;
             return html;
         },
         'maratona': () => {
@@ -630,29 +669,31 @@ document.addEventListener('DOMContentLoaded', () => {
         'joias': () => {
             let html = '<div class="card" style="margin-bottom: 20px;">';
             html += '<h2 style="color: var(--primary-color);">Garimpeiro de Joias Escondidas 💎</h2>';
-            html += '<p style="margin-top: 10px;">O outro lado da moeda: plataformas 100% de nicho, desconhecidas e gratuitas. Elas abrigam os acervos independentes mais profundos!</p>';
+            html += '<p style="margin-top: 10px;">O outro lado da moeda: plataformas 100% de nicho, alternativas e gratuitas. Explorando o fundo do oceano com visuais impressionantes.</p>';
             html += '</div>';
 
             const joiasData = [
-                { name: 'Itaú Cultural Play', type: 'Cinema Nacional de Arte', interface: 'Ótima', mobile: 'Sim (App)', geo: 'Brasil', login: 'Sim (Gratuito)', security: 'Oficial e Seguro', user: 'Amantes do Cinema Brasileiro' },
-                { name: 'Tamanduá TV', type: 'Documentários Independentes', interface: 'Média', mobile: 'Web Dinâmico', geo: 'Sem restrição', login: 'Sim (Email)', security: 'Seguro', user: 'Pesquisadores de Audiovisual' },
-                { name: 'Sesc Digital', type: 'Shows e Clássicos de Arte', interface: 'Excelente', mobile: 'Responsivo Web', geo: 'BR', login: 'Não exige', security: 'Oficial SESC', user: 'Fãs de Arte Cult' },
-                { name: 'Libreflix', type: 'Open-Source, Filmes Livres', interface: 'Simples', mobile: 'WebApp', geo: 'Mundial', login: 'Não exige', security: 'Comunitário', user: 'Ativistas e Estudantes' },
-                { name: 'TV Cultura Play', type: 'Castelo Rá-Tim-Bum, Roda Viva', interface: 'Boa', mobile: 'Sim (App)', geo: 'Brasil', login: 'Não exige', security: 'Oficial', user: 'Famílias Saudosaistas' }
+                { name: 'Itaú Cultural Play', type: 'Cinema Nacional de Arte', interface: 'Ótima', mobile: 'Sim (App)', geo: 'Brasil', login: 'Sim (Gratuito)', security: 'Oficial e Seguro', user: 'Amantes do Audiovisual', img: 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?auto=format&fit=crop&w=600&q=80', link: 'https://www.itauculturalplay.com.br/' },
+                { name: 'Tamanduá TV', type: 'Documentários Independentes', interface: 'Média', mobile: 'Web Dinâmico', geo: 'Sem restrição', login: 'Sim (Email)', security: 'Seguro', user: 'Pesquisadores', img: 'https://images.unsplash.com/photo-1552084117-56a98a414591?auto=format&fit=crop&w=600&q=80', link: 'https://tamandua.tv.br/' },
+                { name: 'Sesc Digital', type: 'Shows e Cult', interface: 'Excelente', mobile: 'Responsivo Web', geo: 'BR', login: 'Não exige', security: 'Oficial SESC', user: 'Fãs de Cult', img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80', link: 'https://sesc.digital/' },
+                { name: 'Libreflix', type: 'Open-Source, Filmes Livres', interface: 'Simples', mobile: 'WebApp', geo: 'Mundial', login: 'Não exige', security: 'Comunitário', user: 'Ativistas / Estudantes', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80', link: 'https://libreflix.org/' },
+                { name: 'TV Cultura Play', type: 'Castelo Rá-Tim-Bum, Roda Viva', interface: 'Boa', mobile: 'App Nativo', geo: 'Brasil', login: 'Não exige', security: 'Oficial', user: 'Famílias Nostálgicas', img: 'https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?auto=format&fit=crop&w=600&q=80', link: 'https://tvcultura.com.br/' }
             ];
 
-            html += '<div class="grid-container">';
+            html += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">';
             joiasData.forEach(j => {
                 html += `
-                    <div class="card platform-card" style="border-top: 4px solid var(--primary-color);">
-                        <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 10px;">${j.name}</h3>
-                        <p><strong>🎭 Acervo:</strong> ${j.type}</p>
-                        <p><strong>📱 Mobile:</strong> ${j.mobile}</p>
-                        <p><strong>🖥️ UI/UX:</strong> ${j.interface}</p>
-                        <p><strong>🔑 Cadastro:</strong> ${j.login}</p>
-                        <div style="background: var(--sidebar-hover); padding: 10px; border-radius: 5px; margin-top: 15px;">
-                            <p style="font-size: 0.9em; font-weight: bold;">👤 Perfil Ideal:</p>
-                            <p style="font-size: 0.85em;">${j.user}</p>
+                    <div class="card platform-card img-preview-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <a href="${j.link}" target="_blank" style="display: block;">
+                            <img src="${j.img}" alt="${j.name}" style="width: 100%; height: 200px; object-fit: cover;">
+                        </a>
+                        <div style="padding: 15px; flex: 1; display: flex; flex-direction: column;">
+                            <span class="platform-badge" style="align-self: flex-start; margin-bottom: 10px; background-color: var(--accent-color);">💎 Garimpo Regional</span>
+                            <h3 style="color: var(--primary-color); font-size: 1.3em;">${j.name}</h3>
+                            <p style="font-size: 0.85em; margin: 10px 0; flex: 1;"><strong>🎭 Acervo:</strong> ${j.type}</p>
+                            <p style="font-size: 0.8em; margin-bottom: 5px;"><strong>📱 Acesso:</strong> ${j.mobile}</p>
+                            <p style="font-size: 0.8em; margin-bottom: 15px;"><strong>🔐 ${j.login}</strong></p>
+                            <a href="${j.link}" target="_blank" class="btn" style="text-align: center; width: 100%;">Acessar ${j.name}</a>
                         </div>
                     </div>
                 `;
@@ -663,90 +704,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    function initTrackerLogic() {
-        const form = document.getElementById('tracker-form');
-        const list = document.getElementById('tracker-list');
-        
-        // Initial setup data from localStorage (starts empty if never used prior)
-        let seriesState = localStorage.getItem('cinelivre_tracker');
-        let series = seriesState ? JSON.parse(seriesState) : [];
-
-        function renderTracker() {
-            list.innerHTML = '';
-            if (series.length === 0) {
-                list.innerHTML = '<p style="grid-column: 1 / -1;">Nenhuma série adicionada ainda. Use o formulário acima para adicionar!</p>';
-                return;
-            }
-            series.forEach(s => {
-                const el = document.createElement('div');
-                el.className = 'card platform-card';
-                el.style.position = 'relative';
-                el.innerHTML = `
-                    <button class="delete-btn" data-id="${s.id}" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: var(--accent-color); font-size: 1.2em; cursor: pointer;" title="Deletar">✖</button>
-                    <h3 style="color: var(--primary-color); margin-bottom: 5px; padding-right: 20px;">${s.name}</h3>
-                    <p style="margin-bottom: 5px; font-size: 0.9em;"><strong>📺 Assistindo em:</strong> <span class="platform-pill">${s.platform || 'Diversos'}</span></p>
-                    <div style="display: flex; gap: 10px; align-items: center; margin-top: 10px;">
-                        <div style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 10px; border-radius: 5px;">
-                            Temporada <strong>${s.season}</strong>
-                        </div>
-                        <div style="background: var(--bg-color); border: 1px solid var(--border-color); padding: 5px 10px; border-radius: 5px;">
-                            Episódio <strong>${s.episode}</strong>
-                        </div>
-                    </div>
-                    <div style="display: flex; gap: 10px; margin-top: 15px;">
-                        <button class="btn btn-ep-add" data-id="${s.id}" style="flex:1; padding: 10px;">+1 Ep</button>
-                        <button class="btn btn-se-add" data-id="${s.id}" style="flex:1; padding: 10px; background-color: #f59e0b;">+1 Temp</button>
-                    </div>
-                `;
-                list.appendChild(el);
-            });
-            
-            document.querySelectorAll('.btn-ep-add').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    const s = series.find(x => x.id === id);
-                    if(s) { s.episode++; saveAndRender(); }
-                });
-            });
-            document.querySelectorAll('.btn-se-add').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    const s = series.find(x => x.id === id);
-                    if(s) { s.season++; s.episode = 1; saveAndRender(); }
-                });
-            });
-            document.querySelectorAll('.delete-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    const id = parseInt(e.target.getAttribute('data-id'));
-                    series = series.filter(x => x.id !== id);
-                    saveAndRender();
-                });
-            });
-        }
-
-        function saveAndRender() {
-            localStorage.setItem('cinelivre_tracker', JSON.stringify(series));
-            renderTracker();
-        }
-
-        if(form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const newSeries = {
-                    id: Date.now(),
-                    name: document.getElementById('t-name').value,
-                    season: parseInt(document.getElementById('t-season').value),
-                    episode: parseInt(document.getElementById('t-ep').value),
-                    platform: document.getElementById('t-plat').value
-                };
-                series.push(newSeries);
-                saveAndRender();
-                form.reset();
-            });
-        }
-        
-        renderTracker();
-    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -759,9 +716,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (renderers[target]) {
                 contentArea.innerHTML = renderers[target]() + '\n<div class="ad-banner" style="margin-top: 30px;"><span style="display:block; font-size: 0.75em; text-transform: uppercase; margin-bottom: 5px;">Espaço Publicitário</span>[ Anúncio 728x90 ]</div>';
-                if (target === 'rastreador' && typeof initTrackerLogic === 'function') {
-                    initTrackerLogic();
-                }
             } else {
                 contentArea.innerHTML = `
                     <div class="card">
