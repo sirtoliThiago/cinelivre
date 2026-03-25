@@ -1,10 +1,10 @@
 @echo off
 color 0A
 echo ==========================================================
-echo       CineLivre V2 - Mega Atualizador do GitHub
+echo       CineLivre - Sistema de Versionamento Interativo
 echo ==========================================================
 echo.
-echo Iniciando o processo de versionamento final...
+echo Iniciando o processo de versionamento para o GitHub...
 echo.
 
 :: Verifica se o Git esta instalado
@@ -19,7 +19,7 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-:: Verifica se o git ja foi inicializado nesta pasta
+:: Verifica inicializacao do repositorio
 if not exist ".git" (
     echo [*] Repositorio Git local nao encontrado. Inicializando do zero...
     git init
@@ -27,13 +27,22 @@ if not exist ".git" (
     git remote add origin https://github.com/sirtoliThiago/cinelivre.git
 )
 
-echo [1/3] Preparando os super novos arquivos (Séries, Ads, Capas)...
+echo [1/4] Adicionando os novos arquivos modificados...
 git add .
+echo.
 
-echo [2/3] Registrando o historico (Commit)...
-git commit -m "Build V2: Painel Dinamico com Imagens, Rastreador, Canais e AdBanners"
+color 0B
+echo [2/4] NOMENCLATURA DA VERSAO
+echo Descreva as alteracoes feitas ou digite a versao (ex: v2.5 - Canais de Anime).
+set /p msg_commit="Digite aqui a versao/ajuste atual: "
 
-echo [3/3] Subindo as novidades para a nuvem da sua conta...
+echo.
+color 0A
+echo [3/4] Registrando o historico (Commit)...
+git commit -m "%msg_commit%"
+
+echo.
+echo [4/4] Subindo as novidades para a nuvem da sua conta...
 git push -u origin main
 if %errorlevel% neq 0 (
     color 0C
@@ -48,7 +57,8 @@ if %errorlevel% neq 0 (
 color 0B
 echo.
 echo ==========================================================
-echo   SUCESSO ABSOLUTO! Tudo salvo na sua conta do Github!
+echo   SUCESSO ABSOLUTO! A versao "%msg_commit%" esta no Github!
 echo ==========================================================
+echo O projeto CineLivre acaba de ser atualizado em seguranca.
 echo Pode fechar esta janela.
 pause
