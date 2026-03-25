@@ -223,3 +223,30 @@ body {
         padding: 20px 15px;
     }
 }
+
+/* Image Preview Card Hover Effects */
+.img-preview-card img {
+    transition: transform 0.3s ease;
+}
+.img-preview-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Ad Banner Styles */
+.ad-banner {
+    background-color: var(--sidebar-hover);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 0.85em;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.ad-banner:hover {
+    opacity: 0.9;
+}
