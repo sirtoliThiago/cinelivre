@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLivre - Streaming Gratuito</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar de Navegação -->
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">
+                <h2>🎬 CineLivre</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" data-target="dashboard" class="active">Painel Mestre</a></li>
+                <li><a href="#" data-target="plataformas">Plataformas Gratuitas</a></li>
+                <li><a href="#" data-target="generos">Por Gênero</a></li>
+                <li><a href="#" data-target="classicos">Cinema Clássico</a></li>
+                <li><a href="#" data-target="rastreador">Rastreador de Séries</a></li>
+                <li><a href="#" data-target="internacional">Cinema Internacional</a></li>
+                <li><a href="#" data-target="alertas">Alertas de Lançamento</a></li>
+                <li><a href="#" data-target="maratona">Maratonas</a></li>
+                <li><a href="#" data-target="joias">Joias Escondidas</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="theme-toggle">🌙 Tema Escuro</button>
+            </div>
+        </nav>
+
+        <!-- Área Principal -->
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <button id="mobile-menu-btn" class="mobile-menu-btn">☰ Menu</button>
+                    <h1 id="page-title">Painel de Controle Mestre</h1>
+                </div>
+            </header>
+            
+            <section id="content-area" class="content">
+                <!-- Conteúdo dinâmico será injetado aqui pelo JS -->
+                <div class="dashboard-welcome card">
+                    <h2>Bem-vindo ao CineLivre! 🍿</h2>
+                    <p>O seu centro definitivo e gratuito de entretenimento.</p>
+                    <p style="margin-top:10px; color: var(--text-color);">Navegue pelo menu lateral para explorar as plataformas legais gratuitas, buscar filmes, organizar sua maratona e muito mais.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
